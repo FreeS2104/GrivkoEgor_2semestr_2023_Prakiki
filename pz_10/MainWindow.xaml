@@ -1,0 +1,46 @@
+﻿<Window x:Class="pz_10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Notepad" Height="350" Width="938">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ToolBar Grid.Row="0">
+            <ComboBox x:Name="FontSizeComboBox" Width="50" Margin="5" SelectionChanged="FontSizeComboBox_SelectionChanged">
+                <ComboBoxItem Content="5" />
+                <ComboBoxItem Content="10" />
+                <ComboBoxItem Content="15" />
+                <ComboBoxItem Content="20" />
+                <ComboBoxItem Content="25" />
+                <ComboBoxItem Content="30" />
+                <ComboBoxItem Content="35" />
+                <ComboBoxItem Content="40" />
+                <ComboBoxItem Content="45" />
+                <ComboBoxItem Content="50" />
+                <ComboBoxItem Content="55" />
+                <ComboBoxItem Content="60" />
+                <ComboBoxItem Content="65" />
+                <ComboBoxItem Content="70" />
+            </ComboBox>
+            <Button x:Name="BoldButton" Content="B" Width="25" Margin="5" Click="BoldButton_Click" />
+            <Button x:Name="ItalicButton" Content="I" Width="25" Margin="5" Click="ItalicButton_Click" />
+            <Button x:Name="UnderlineButton" Content="U" Width="25" Margin="5" Click="UnderlineButton_Click" />
+            <Separator />
+            <Button x:Name="OpenButton" Content="Отркыть" Width="70" Margin="5" Click="OpenButton_Click" />
+            <Button x:Name="SaveButton" Content="Сохранить" Width="70" Margin="5" Click="SaveButton_Click" />
+            <Separator />
+            <Button x:Name="CopyButton" Content="Копировать" Width="89" Click="CopyButton_Click" />
+            <Button x:Name="PasteButton" Content="Вставить" Width="70" Margin="5" Click="PasteButton_Click" />
+            <Separator />
+            <Button x:Name="UndoButton" Content="Назад" Width="44" Click="UndoButton_Click" />
+            <Button x:Name="RedoButton" Content="Вперед" Width="54" Click="RedoButton_Click" />
+            <Separator />
+
+        </ToolBar>
+        <TextBox x:Name="TextBox" Grid.Row="1" Margin="5" AcceptsReturn="True" AcceptsTab="True" TextChanged="TextBox_TextChanged"  />
+
+    </Grid>
+</Window>
